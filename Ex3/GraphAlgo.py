@@ -108,9 +108,22 @@ class GraphAlgo(GraphAlgoInterface):
                     pathMax = w
             if pathMax >= 0:
                 Q[src] = pathMax
-                print(str(src) + " " + str(Q[src]))
+                # print(str(src) + " " + str(Q[src]))
         center = min(Q, key=Q.get)
         return center, Q[center]
 
     def TSP(self, node_lst: List[int]) -> (List[int], float):
-        
+            nodes = self.get_graph().get_all_v()
+            allPairsW = {}
+            allPairsWPath = {}
+            pathMin = list()
+            weightMin = float('inf')
+            for src in nodes:
+                for dest in nodes:
+                    w, listNodes = self.shortest_path(src, dest)
+                    if all(node in listNodes for node in node_lst):
+                        if w < weightMin:
+                            weightMin = w
+                            pathMin = listNodes
+
+            return pathMin, weightMin
