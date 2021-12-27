@@ -1,3 +1,5 @@
+from random import randint
+
 from src.GraphInterface import *
 
 class DiGraph(GraphInterface):
@@ -50,7 +52,8 @@ class DiGraph(GraphInterface):
             return False
 
         if pos == None:
-            pos = tuple((0.0, 0.0, 0.0))
+
+            pos = tuple((randint(0, 100), randint(0, 100), 0.0))
 
         if len(pos) > 3:
             return False
@@ -61,6 +64,9 @@ class DiGraph(GraphInterface):
     def remove_node(self, node_id: int) -> bool:
         if node_id not in self._nodes:
             return False
+        del self._edges[node_id]
+        for src in self.all_in_edges_of_node(node_id):
+            self.remove_edge(src, node_id)
         del self._nodes[node_id]
 
     def remove_edge(self, node_id1: int, node_id2: int) -> bool:
