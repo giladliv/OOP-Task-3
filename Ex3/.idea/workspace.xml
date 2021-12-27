@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a058b2a-c5f0-42fb-acab-2d4f0ec2e515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Simulator/GraphSimulator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Simulator/MatExmp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Simulator/MatpoGame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Simulator/SimulatorGraph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Simulator/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Node.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/DiGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphAlgo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/A5.json_edited.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/A5.json_edited.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simulator/SimulatorGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/Simulator/SimulatorGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/T0.json_saved.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/T0.json_saved.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,49 +42,7 @@
       <recent name="D:\gilad\לימודים\אריאל\מדמח\שנה ב - 2021-2022\מונחה עצמים\מטלות\מטלה 3\התחלה\Ex3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mainSimulator">
-    <configuration name="MatExmp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator/MatExmp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MatpoGame" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator/MatpoGame.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="SimulatorGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,6 +56,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator/SimulatorGraph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="buttons" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\gilad\לימודים\אריאל\מדמח\שנה ב - 2021-2022\מונחה עצמים\מטלות\מטלה 3\התחלה\OOP-Task-3\Ex3\buttons.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,13 +127,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="using_ui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pygame_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pygame_ui/using_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mainSimulator" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.using_ui" />
         <item itemvalue="Python.SimulatorGraph" />
-        <item itemvalue="Python.MatExmp" />
-        <item itemvalue="Python.MatpoGame" />
+        <item itemvalue="Python.buttons" />
+        <item itemvalue="Python.mainSimulator" />
       </list>
     </recent_temporary>
   </component>
@@ -197,46 +188,50 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="409" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1640192437406" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1640601439129">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1640606485878">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640601439129" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1640601439129">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640606485878" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1640606485878">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640601439129" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1640601439128">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640606485878" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1640606485878">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640601439128" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1640601439129">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640606485878" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1640606485878">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640601439129" />
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640448985020">
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640606485878" />
+    <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640603961034">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640448985020" />
-    <state width="1515" height="258" key="GridCell.Tab.1.center" timestamp="1640448985020">
+    <state width="1515" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640603961034" />
+    <state width="1515" height="258" key="GridCell.Tab.1.center" timestamp="1640603961034">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1640448985020" />
-    <state width="1515" height="258" key="GridCell.Tab.1.left" timestamp="1640448985020">
+    <state width="1515" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1640603961034" />
+    <state width="1515" height="258" key="GridCell.Tab.1.left" timestamp="1640603961034">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1640448985020" />
-    <state width="1515" height="258" key="GridCell.Tab.1.right" timestamp="1640448985020">
+    <state width="1515" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1640603961034" />
+    <state width="1515" height="258" key="GridCell.Tab.1.right" timestamp="1640603961034">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640448985020" />
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640600487442">
+    <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640603961034" />
+    <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640603785265">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1640600487442" />
+    <state x="477" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1640603785265" />
     <state x="571" y="60" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640601387887">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="571" y="60" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.816@0.0.1536.816" timestamp="1640601387887" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1640603165913">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1640603165913" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -245,6 +240,16 @@
           <url>file://$PROJECT_DIR$/GraphAlgo.py</url>
           <line>33</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/main.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/main.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

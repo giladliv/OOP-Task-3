@@ -185,4 +185,4 @@ class GraphAlgo(GraphAlgoInterface):
 
     def plot_graph(self):
         sim = SimulatorGraph(self)
-        sim.draw()
+        sim.run()
