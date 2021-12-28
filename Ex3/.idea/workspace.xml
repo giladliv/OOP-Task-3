@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0a058b2a-c5f0-42fb-acab-2d4f0ec2e515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Ex3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ex3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/DiGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphAlgo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +25,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="22bpHYN4EP52T4NewQPdIBoDSG8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -64,6 +70,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SimulatorGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator/SimulatorGraph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="buttons" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\gilad\לימודים\אריאל\מדמח\שנה ב - 2021-2022\מונחה עצמים\מטלות\מטלה 3\התחלה\OOP-Task-3\Ex3\buttons.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,55 +133,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for TestDiGraph.TestDiGraph" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="using_ui" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pygame_ui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for TestDiGraph.TestDiGraph.test_add_node" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph.test_add_node&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for TestDiGraph.TestDiGraph.test_remove_node" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph.test_remove_node&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pygame_ui/using_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph" />
-        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_remove_node" />
-        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_add_node" />
         <item itemvalue="Python.EnterWindow" />
+        <item itemvalue="Python.using_ui" />
+        <item itemvalue="Python.SimulatorGraph" />
+        <item itemvalue="Python.buttons" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +176,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -162,67 +190,24 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="423" height="466" key="DebuggerActiveHint" timestamp="1640709476524">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="423" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1640709476524" />
-    <state width="1515" height="188" key="GridCell.Tab.0.bottom" timestamp="1640710387205">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="188" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
-    <state width="1515" height="188" key="GridCell.Tab.0.center" timestamp="1640710387205">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="188" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
-    <state width="1515" height="188" key="GridCell.Tab.0.left" timestamp="1640710387205">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="188" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
-    <state width="1515" height="188" key="GridCell.Tab.0.right" timestamp="1640710387205">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="188" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640709796391">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
-    <state width="1515" height="258" key="GridCell.Tab.1.center" timestamp="1640709796391">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
-    <state width="1515" height="258" key="GridCell.Tab.1.left" timestamp="1640709796391">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
-    <state width="1515" height="258" key="GridCell.Tab.1.right" timestamp="1640709796391">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640699582832">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1640699582832" />
-    <state x="571" y="60" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640601387887">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="571" y="60" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.816@0.0.1536.816" timestamp="1640601387887" />
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1640603165913">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1640603165913" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Tests/TestDiGraph.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/src/main.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
