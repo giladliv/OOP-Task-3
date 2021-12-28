@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a058b2a-c5f0-42fb-acab-2d4f0ec2e515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/DiGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphAlgo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/TestDiGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/TestDiGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/A5.json_edited.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/T0.json_saved.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +42,50 @@
       <recent name="D:\gilad\לימודים\אריאל\מדמח\שנה ב - 2021-2022\מונחה עצמים\מטלות\מטלה 3\התחלה\Ex3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for TestDiGraph.TestDiGraph.test_remove_edge">
-    <configuration name="Unittests for TestDiGraph.TestDiGraph.test_add_edge" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="EnterWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator/EnterWindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for TestDiGraph.TestDiGraph" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -56,7 +95,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph.test_add_edge&quot;" />
+      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -74,20 +113,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for TestDiGraph.TestDiGraph.test_remove_edge" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDiGraph.TestDiGraph.test_remove_edge&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for TestDiGraph.TestDiGraph.test_remove_node" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,27 +127,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Tests.TestDiGraph.TestDiGraph.test_v_size" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Tests.TestDiGraph.TestDiGraph.test_v_size&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_remove_edge" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph" />
         <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_remove_node" />
-        <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_add_edge" />
         <item itemvalue="Python tests.Unittests for TestDiGraph.TestDiGraph.test_add_node" />
-        <item itemvalue="Python tests.Unittests for Tests.TestDiGraph.TestDiGraph.test_v_size" />
+        <item itemvalue="Python.EnterWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -152,46 +163,50 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="444" height="466" key="DebuggerActiveHint" timestamp="1640705183991">
+    <state width="423" height="466" key="DebuggerActiveHint" timestamp="1640709476524">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="444" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1640705183991" />
-    <state width="1515" height="188" key="GridCell.Tab.0.bottom" timestamp="1640706466863">
+    <state width="423" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1640709476524" />
+    <state width="1515" height="188" key="GridCell.Tab.0.bottom" timestamp="1640710387205">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="188" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640706466863" />
-    <state width="1515" height="188" key="GridCell.Tab.0.center" timestamp="1640706466863">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
+    <state width="1515" height="188" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
+    <state width="1515" height="188" key="GridCell.Tab.0.center" timestamp="1640710387205">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="188" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640706466863" />
-    <state width="1515" height="188" key="GridCell.Tab.0.left" timestamp="1640706466863">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
+    <state width="1515" height="188" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
+    <state width="1515" height="188" key="GridCell.Tab.0.left" timestamp="1640710387205">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="188" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640706466863" />
-    <state width="1515" height="188" key="GridCell.Tab.0.right" timestamp="1640706466863">
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
+    <state width="1515" height="188" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
+    <state width="1515" height="188" key="GridCell.Tab.0.right" timestamp="1640710387205">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="188" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640706466863" />
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640705313500">
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
+    <state width="1515" height="188" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640710387205" />
+    <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640709796391">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640705313500" />
-    <state width="1515" height="258" key="GridCell.Tab.1.center" timestamp="1640705313500">
+    <state width="1515" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
+    <state width="1515" height="258" key="GridCell.Tab.1.center" timestamp="1640709796391">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1640705313500" />
-    <state width="1515" height="258" key="GridCell.Tab.1.left" timestamp="1640705313500">
+    <state width="1515" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
+    <state width="1515" height="258" key="GridCell.Tab.1.left" timestamp="1640709796391">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1640705313500" />
-    <state width="1515" height="258" key="GridCell.Tab.1.right" timestamp="1640705313500">
+    <state width="1515" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
+    <state width="1515" height="258" key="GridCell.Tab.1.right" timestamp="1640709796391">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640705313500" />
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640603785265">
+    <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640709796391" />
+    <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640699582832">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="477" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1640603785265" />
+    <state x="477" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1640699582832" />
     <state x="571" y="60" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640601387887">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -205,19 +220,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GraphAlgo.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/Tests/TestDiGraph.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
