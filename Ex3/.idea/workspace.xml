@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0a058b2a-c5f0-42fb-acab-2d4f0ec2e515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphAlgo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simulator/EnterWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Simulator/EnterWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/TestGraphAlgo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/A5_edited.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/T0.json_saved.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/T0_saved.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/a111.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -88,6 +85,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for TestGraphAlgo.TestGraphAlgo.test_1K" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Ex3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestGraphAlgo.TestGraphAlgo.test_1K&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for TestGraphAlgo.TestGraphAlgo.test_1K_TSP" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Ex3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,27 +113,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for TestGraphAlgo.TestGraphAlgo.test_A5" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Ex3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestGraphAlgo.TestGraphAlgo.test_A5&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_100K" />
         <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_10K" />
-        <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_1K_TSP" />
+        <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_1K" />
         <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo" />
-        <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_A5" />
+        <item itemvalue="Python tests.Unittests for TestGraphAlgo.TestGraphAlgo.test_1K_TSP" />
       </list>
     </recent_temporary>
   </component>
@@ -156,26 +153,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="423" height="466" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1640709476524" />
-    <state width="1515" height="236" key="GridCell.Tab.0.bottom" timestamp="1640714205496">
+    <state width="1515" height="415" key="GridCell.Tab.0.bottom" timestamp="1640717157863">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="236" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640714205496" />
-    <state width="1515" height="236" key="GridCell.Tab.0.center" timestamp="1640714205496">
+    <state width="1515" height="415" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1640717157863" />
+    <state width="1515" height="415" key="GridCell.Tab.0.center" timestamp="1640717157863">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="236" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640714205496" />
-    <state width="1515" height="236" key="GridCell.Tab.0.left" timestamp="1640714205496">
+    <state width="1515" height="415" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1640717157863" />
+    <state width="1515" height="415" key="GridCell.Tab.0.left" timestamp="1640717157863">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="236" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640714205496" />
-    <state width="1515" height="236" key="GridCell.Tab.0.right" timestamp="1640714205496">
+    <state width="1515" height="415" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1640717157863" />
+    <state width="1515" height="415" key="GridCell.Tab.0.right" timestamp="1640717157863">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1280.672@0.0.1536.816" timestamp="1640614215438" />
-    <state width="1515" height="236" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640714205496" />
+    <state width="1515" height="415" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1640717157863" />
     <state width="1515" height="258" key="GridCell.Tab.1.bottom" timestamp="1640712643777">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -192,6 +189,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1515" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1640712643777" />
+    <state x="279" y="53" key="SettingsEditor" timestamp="1640717965413">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="279" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1640717965413" />
     <state x="477" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1640699582832">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
