@@ -39,8 +39,3 @@ class EnterWindow:
 
     def getTextArray(self):
         return self.strRetArr
-
-
-
-#window = EnterWindow("Enter Edge", ["src", "dest", "w"], "press to enter")
-#print(window.getTextArray())
