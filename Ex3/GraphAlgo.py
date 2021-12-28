@@ -143,7 +143,6 @@ class GraphAlgo(GraphAlgoInterface):
                 self.allPairsPath[src][dest] = listNodes
 
     def TSP(self, node_lst: List[int]) -> (List[int], float):
-        nodes = self.get_graph().get_all_v()
         self.allPairsW = {}
         self.allPairsPath = {}
         threadArr = []
@@ -151,9 +150,8 @@ class GraphAlgo(GraphAlgoInterface):
             th = threading.Thread(target=self.shortForThread, args=(node_lst, src))
             th.start()
             threadArr += [th]
-        for i in range(len(threadArr)):
-            threadArr[i].join()
-
+        for th in threadArr:
+            th.join()
 
         currNodes = list()
         for city in node_lst:

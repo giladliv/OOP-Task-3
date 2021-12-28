@@ -3,7 +3,7 @@ from typing import List
 
 
 class EnterWindow:
-    def __init__(self, title: str, labelStart:str, labels: List[str], btnTxt: str):
+    def __init__(self, title: str, labelStart: str, labels: List[str], btnTxt: str):
         self.strRetArr = []
         self.mainWindow = tk.Tk()
         self.mainWindow.title(title)
@@ -25,7 +25,6 @@ class EnterWindow:
         self.setTextArray()
         self.mainWindow.destroy()
         self.mainWindow.quit()
-
 
 
     def setTextArray(self):

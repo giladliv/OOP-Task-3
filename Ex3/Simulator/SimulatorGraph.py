@@ -25,13 +25,13 @@ class SimulatorGraph():
         loadB = Button('LOAD', (70, 25))
         loadB.add_click_listener(self.loadGraph)
         saveB = Button('SAVE', (70, 25))
-        saveB.add_click_listener(lambda: print("The graph is saved"))
+        saveB.add_click_listener(self.saveGraph)
         spB = Button('Shortest Path', (100, 25))
         spB.add_click_listener(self.shortestPath)
         tspB = Button('TSP', (70, 25))
         tspB.add_click_listener(self.tsp)
         centerB = Button('CENTER', (70, 25))
-        centerB.add_click_listener(lambda: print("The Center of the graph is: "))
+        centerB.add_click_listener(self.center)
         cleanB = Button('Refresh', (70, 25))
         cleanB.add_click_listener(self.refreshDisplay)
         self.toolbar = MenuBar([loadB, saveB, spB, tspB, centerB, cleanB])
@@ -40,9 +40,6 @@ class SimulatorGraph():
         self._x += [nodes[id][0]]
         self._y += [nodes[id][1]]
         idPos = nodes[id]
-        for src in self._algo.get_graph().all_in_edges_of_node(id):
-            srcPos = nodes[src]
-            ax.annotate("", xy=(idPos[0], idPos[1]), xytext=(srcPos[0], srcPos[1]), arrowprops=dict(arrowstyle="->"))
         for dest in self._algo.get_graph().all_out_edges_of_node(id):
             destPos = nodes[dest]
             ax.annotate("", xy=(destPos[0], destPos[1]), xytext=(idPos[0], idPos[1]), arrowprops=dict(arrowstyle="->"))
@@ -52,27 +49,24 @@ class SimulatorGraph():
         nodes = self._algo.get_graph().get_all_v()
         self._x = []
         self._y = []
-        thrArr = []
         for id in nodes:
             self._x += [nodes[id][0]]
             self._y += [nodes[id][1]]
             idPos = nodes[id]
-            for src in self._algo.get_graph().all_in_edges_of_node(id):
-                srcPos = nodes[src]
-                ax.annotate("", xy=(idPos[0], idPos[1]), xytext=(srcPos[0], srcPos[1]), arrowprops=dict(arrowstyle="->"))
             for dest in self._algo.get_graph().all_out_edges_of_node(id):
                 destPos = nodes[dest]
                 ax.annotate("", xy=(destPos[0], destPos[1]), xytext=(idPos[0], idPos[1]), arrowprops=dict(arrowstyle="->"))
+            ax.scatter(x=nodes[id][0], y=nodes[id][1], color='blue')
             ax.text(idPos[0], idPos[1], str(id), color='red')
 
-        ax.scatter(self._x, self._y)
+        #ax.scatter(self._x, self._y)
 
     def setNodesByPath(self, ax, nodesPath: List[int]):
         nodes = self._algo.get_graph().get_all_v()
         self._x = []
         self._y = []
         lenPath = len(nodesPath)
-        for i in range(lenPath - 1):
+        for i in range(lenPath):
             id = nodesPath[i]
             if id not in nodes:
                 continue
@@ -80,6 +74,8 @@ class SimulatorGraph():
                 self._x += [nodes[id][0]]
                 self._y += [nodes[id][1]]
                 ax.text(nodes[id][0], nodes[id][1], str(id), color='red')
+            if i == lenPath - 1:
+                break
             idNext = nodesPath[i+1]
             if idNext not in nodes:
                 continue
@@ -90,8 +86,6 @@ class SimulatorGraph():
             destPos = nodes[idNext]
             ax.annotate("", xytext=(idPos[0], idPos[1]), xy=(destPos[0], destPos[1]), arrowprops=dict(arrowstyle="->"))
         ax.scatter(self._x, self._y)
-
-
 
     def drawGraph(self, nodesPath: List[int] = None):
         fig, ax = plt.subplots()
@@ -112,8 +106,20 @@ class SimulatorGraph():
     def loadGraph(self):
         root = tk.Tk()
         root.withdraw()
-        file_path = filedialog.askopenfilename(initialdir=os.getcwd())
+        file_path = filedialog.askopenfilename(initialdir=os.getcwd(), defaultextension=".json", filetypes=[("json", "*.json")])
         if not self._algo.load_from_json(file_path):
+            return
+        raw_data, size = self.drawGraph()
+        surf = pygame.image.frombuffer(raw_data, size, "RGBA")
+        bg_color = (255, 255, 255)  # fill red as background color
+        self.screen.fill(bg_color)
+        self.screen.blit(surf, (100, 5))
+
+    def saveGraph(self):
+        root = tk.Tk()
+        root.withdraw()
+        file_path = filedialog.asksaveasfilename(initialdir=os.getcwd(), defaultextension=".json", filetypes=[("json file", "*.json")])
+        if not self._algo.save_to_json(file_path):
             return
         raw_data, size = self.drawGraph()
         surf = pygame.image.frombuffer(raw_data, size, "RGBA")
@@ -161,6 +167,14 @@ class SimulatorGraph():
             self.screen.blit(surf, (100, 5))
         except:
             return False
+
+    def center(self):
+        id, pos = self._algo.centerPoint()
+        raw_data, size = self.drawGraph([id])
+        surf = pygame.image.frombuffer(raw_data, size, "RGBA")
+        bg_color = (255, 255, 255)  # fill red as background color
+        self.screen.fill(bg_color)
+        self.screen.blit(surf, (100, 5))
 
     def refreshDisplay(self):
         raw_data, size = self.drawGraph()
