@@ -1,0 +1,163 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class DiGraph{
+    _nodes
+    _edges
+    __init__(self)
+    __repr__(self)
+    v_size(self)
+    e_size(self)
+    get_all_v(self)
+    all_in_edges_of_node(self, id1)
+    all_out_edges_of_node(self, id1)
+    add_edge(self, id1, id2, weight)
+    add_node(self, node_id, pos)
+    remove_node(self, node_id)
+    remove_edge(self, node_id1, node_id2)
+}
+
+class GraphAlgo{
+    _g
+    _pathBest
+    allPairsW
+    allPairsPath
+    __init__(self, graph)
+    get_graph(self)
+    load_from_json(self, file_name)
+    save_to_json(self, file_name)
+    shortest_path(self, id1, id2)
+    centerPoint(self)
+    shortForThread(self, nodes, src)
+    TSP(self, node_lst)
+    setPathsList(self, nodes, nodesRemain, w)
+    plot_graph(self)
+}
+
+class Button{
+    title
+    size
+    color
+    rect
+    on_click
+    show
+    disabled
+    __init__(self, title, size, color)
+    add_click_listener(self, func)
+    render(self, surface, pos)
+    check(self)
+}
+
+class MenuItem{
+    menu_rect
+    show_menu
+    buttons
+    __init__(self, title, size, buttons, color)
+    check(self)
+    render(self, surface, pos)
+}
+
+class SubMenuItem{
+    render(self, surface, pos)
+}
+
+class MenuBar{
+    menu_items
+    rect
+    __init__(self, menu_items)
+    check(self)
+    render(self, surface, pos)
+}
+
+class EnterWindow{
+    strRetArr
+    mainWindow
+    textArr
+    __init__(self, title, labelStart, labels, btnTxt)
+    pressButton(self)
+    setTextArray(self)
+    getTextArray(self)
+}
+
+class SimulatorGraph{
+    _algo
+    _x
+    _y
+    toolbar
+    screen
+    __init__(self, graphAlgo)
+    initButtons(self)
+    setOneNode(self, ax, nodes, id)
+    setTheNodesEdges(self, ax)
+    setNodesByPath(self, ax, nodesPath)
+    drawGraph(self, nodesPath)
+    loadGraph(self)
+    saveGraph(self)
+    shortestPath(self)
+    tsp(self)
+    center(self)
+    refreshDisplay(self)
+    run(self)
+}
+
+class GraphAlgoInterface{
+    get_graph(self)
+    load_from_json(self, file_name)
+    save_to_json(self, file_name)
+    shortest_path(self, id1, id2)
+    TSP(self, node_lst)
+    centerPoint(self)
+    plot_graph(self)
+}
+
+class GraphInterface{
+    v_size(self)
+    e_size(self)
+    get_all_v(self)
+    all_in_edges_of_node(self, id1)
+    all_out_edges_of_node(self, id1)
+    get_mc(self)
+    add_edge(self, id1, id2, weight)
+    add_node(self, node_id, pos)
+    remove_node(self, node_id)
+    remove_edge(self, node_id1, node_id2)
+}
+
+
+GraphInterface <|-- DiGraph
+GraphAlgoInterface <|-- GraphAlgo
+Button <|-- MenuItem
+MenuItem <|-- SubMenuItem
+GraphInterface <-- SimulatorGraph
+GraphAlgoInterface <-- SimulatorGraph
+Button <-- EnterWindow
+EnterWindow <-- SimulatorGraph
+
+
+note top of Button
+simple button, base for everything
+end note
+
+note top of MenuItem
+drop down to bottom side
+end note
+
+note top of SubMenuItem
+dropdown to the right
+end note
+
+note top of MenuBar
+container for menu items
+end note
+
+note top of GraphAlgoInterface
+This abstract class represents an interface of a graph.
+end note
+
+note top of GraphInterface
+This abstract class represents an interface of a graph.
+end note
+
+
+@enduml

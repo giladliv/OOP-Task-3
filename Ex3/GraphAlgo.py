@@ -22,6 +22,8 @@ class GraphAlgo(GraphAlgoInterface):
 
     # load graph's details from json
     def load_from_json(self, file_name: str) -> bool:
+        if not file_name.endswith(".json"):
+            file_name += '.json'
         try:
             with open(file_name) as file:
                 jCont = json.load(file)
@@ -29,21 +31,21 @@ class GraphAlgo(GraphAlgoInterface):
         except:
             return False
 
-    # collection graph data from json file
+        # collection graph data from json file
         self._g = DiGraph()
         nodesLen = len(jCont['Nodes'])
         for nodeData in jCont['Nodes']:
             id = nodeData['id']
             if 'pos' not in nodeData:
-                pos = tuple((randint(0, nodesLen), randint(0, nodesLen), 0))
+                pos = tuple((randint(0, nodesLen), randint(0, nodesLen), 0))  # generate a random pos if doesnt have a pos
             else:
-                pos = tuple(str(nodeData['pos']).split(','))
+                pos = tuple(str(nodeData['pos']).split(','))    # generate a position from a string
                 newPos = []
                 for i in range(len(pos)):
                     newPos += [float(pos[i])]
                 pos = tuple(newPos)
             self._g.add_node(id, pos)
-        for edgesData in jCont['Edges']:
+        for edgesData in jCont['Edges']:    # add all the edges
             src = edgesData['src']
             dest = edgesData['dest']
             w = float(edgesData['w'])
@@ -52,37 +54,32 @@ class GraphAlgo(GraphAlgoInterface):
 
     # save to json
     def save_to_json(self, file_name: str) -> bool:
+        if not file_name.endswith(".json"):
+            file_name += '.json'
         nodesList = self.get_graph().get_all_v()
         nodes = []
         edges = []
 
-    # Insert data into json file
+        # Insert data into json file
         for node in nodesList:
             dictNode = {}
             dictNode['id'] = node
-            dictNode['pos'] = nodesList[node]
+            dictNode['pos'] = str(nodesList[node])[1:-1]   # save node as id and pos dict
             nodes += [dictNode]
 
-            inEdges = self.get_graph().all_in_edges_of_node(node)
-            for src in inEdges:
-                currInEdge = {}
-                currInEdge['src'] = src
-                currInEdge['dest'] = node
-                currInEdge['w'] = inEdges[src]
-                edges += [currInEdge]
-            outEdges = self.get_graph().all_out_edges_of_node(node)
+            outEdges = self.get_graph().all_out_edges_of_node(node) # save all the edges of some node
             for dest in outEdges:
                 currOutEdges = {}
                 currOutEdges['src'] = node
                 currOutEdges['dest'] = dest
                 currOutEdges['w'] = outEdges[dest]
+                edges += [currOutEdges]
         dictJson = {}
         dictJson['Nodes'] = nodes
         dictJson['Edges'] = edges
-        if not file_name.endswith(".json"):
-            file_name += '.json'
+
         try:
-            with open(file_name, 'w') as file:
+            with open(file_name, 'w') as file:  #check if no was no exception in opening
                 json.dump(dictJson, file)
                 file.close()
                 return True
@@ -94,19 +91,20 @@ class GraphAlgo(GraphAlgoInterface):
         Q = []
         dist = {}
         prev = {}
-        # get all the nodes in the connected graph
+        # get all the nodes in the connected graph and set an initial prev and dist
         for v in self._g.get_all_v():
             dist[v] = float('inf')
             prev[v] = None
             Q.append(v)
         dist[id1] = 0
 
-    # while Q is not empty
+        # while there are nodes in array continue pop
         while len(Q) > 0:
             #  Node with the least distance will be selected first
             u = min(Q, key=dist.get)
             Q.remove(u)
 
+            #if the node is the destination track the path backwards and return its w and path
             if u == id2:
                 s = list()
                 if prev[u] is not None or u == id1:
@@ -134,18 +132,19 @@ class GraphAlgo(GraphAlgoInterface):
         for src in nodes:
             pathMax = -1
             for dest in nodes:
-                w, listNodes = self.shortest_path(src, dest)
                 # The maximum path of all the shortest paths we found
                 # in the graph between the nodes
+                w, listNodes = self.shortest_path(src, dest)
                 if w != float('inf') and pathMax < w:
                     pathMax = w
+                elif w == float('inf'):
+                    return None, float('inf')
             if pathMax >= 0:
                 Q[src] = pathMax
-                # print(str(src) + " " + str(Q[src]))
         center = min(Q, key=Q.get)
         return center, Q[center]
 
-    # thread to find the TSP for a group of some of the nodes
+    # helper function for thread operation to find the TSP for a group of some of the nodes
     def shortForThread(self, nodes, src):
         for dest in nodes:
             w, listNodes = self.shortest_path(src, dest)
@@ -155,7 +154,7 @@ class GraphAlgo(GraphAlgoInterface):
                 if src not in self.allPairsPath:
                     self.allPairsPath[src] = {}
                 self.allPairsW[src][dest] = w
-                self.allPairsPath[src][dest] = listNodes
+                self.allPairsPath[src][dest] = listNodes    # set in dictionary
 
     def TSP(self, node_lst: List[int]) -> (List[int], float):
         self.allPairsW = {}
@@ -163,11 +162,13 @@ class GraphAlgo(GraphAlgoInterface):
         threadArr = []
         for src in node_lst:
             th = threading.Thread(target=self.shortForThread, args=(node_lst, src))
+            #  comute all the pairs of the src, in multithreading
             th.start()
             threadArr += [th]
         for th in threadArr:
-            th.join()
+            th.join()       # run on the threads and make sure they compleate their task fully
 
+        #for each node select the best path that contains all of the wanted nodes
         currNodes = list()
         for city in node_lst:
             remained = list(node_lst)
@@ -180,16 +181,17 @@ class GraphAlgo(GraphAlgoInterface):
         for src in self._pathBest:
             for bestNodes in self._pathBest[src]:
                 currWeight = self._pathBest[src][bestNodes]
-                if currWeight < w:
+                if currWeight < w:              # from the best routes select the most shoirtest that contains all the wanted nodes
                     w = currWeight
                     currNodes = bestNodes
 
         currNodes = json.loads(currNodes)
         nodesRet = list()
-        for num in currNodes:
+        for num in currNodes:           # translte the saven path to list of int
             nodesRet.append(int(num))
         return nodesRet, w
 
+    # by given nodes list find the and save the route that has all of the wanted nodes
     def setPathsList(self, nodes: List[int], nodesRemain: List[int], w: float):
         if len(nodesRemain) == 0:
             if nodes[0] not in self._pathBest:
@@ -210,6 +212,7 @@ class GraphAlgo(GraphAlgoInterface):
                         tempRemain.remove(curr)
                 self.setPathsList(tempList, tempRemain, w + self.allPairsW[last][node])
 
+    # present the graph in the gui system
     def plot_graph(self):
         sim = SimulatorGraph(self)
         sim.run()
