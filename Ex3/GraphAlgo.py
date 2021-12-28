@@ -48,6 +48,9 @@ class GraphAlgo(GraphAlgoInterface):
         nodes = []
         edges = []
 
+        if not file_name.endswith(".json"):
+            return False
+
         for node in nodesList:
             dictNode = {}
             dictNode['id'] = node
@@ -70,8 +73,7 @@ class GraphAlgo(GraphAlgoInterface):
         dictJson = {}
         dictJson['Nodes'] = nodes
         dictJson['Edges'] = edges
-        if not file_name.endswith(".json"):
-            file_name += '.json'
+
         try:
             with open(file_name, 'w') as file:
                 json.dump(dictJson, file)
