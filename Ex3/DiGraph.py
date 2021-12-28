@@ -55,7 +55,7 @@ class DiGraph(GraphInterface):
             return False
 
         if pos == None:
-            pos = (randint(0, 100), randint(0, 100), 0.0)
+            pos = tuple((randint(0, 100), randint(0, 100), 0.0))
 
         if len(pos) > 3:
             return False

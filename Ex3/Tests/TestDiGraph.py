@@ -12,7 +12,7 @@ class TestDiGraph(TestCase):
 
     def test_e_size(self):
         graph = DiGraph()
-        graph.add_node(0, (4., 5, 3, 0))
+        graph.add_node(0, (4., 5, 3))
         graph.add_node(1, (1, 5, 0))
         graph.add_node(2, (2, 7, 0))
         graph.add_node(3, (8, 4, 0))
