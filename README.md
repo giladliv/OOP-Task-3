@@ -47,3 +47,6 @@ the center of the graph will be shown.
 similar to selecting the Shortest path, after done selecting it will show only the nodes and edges that involved.
 
 *Runtime = O(|V| x (|V|+|E|)^2)*
+
+#### Refresh
+when pressing on this button the graph will be refreshed and prersented before any other algorithms preformed
