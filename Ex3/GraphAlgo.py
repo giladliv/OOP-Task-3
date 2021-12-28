@@ -1,4 +1,5 @@
 import json
+import threading
 from random import randint
 
 from src.GraphAlgoInterface import *
@@ -20,9 +21,12 @@ class GraphAlgo(GraphAlgoInterface):
         return self._g
 
     def load_from_json(self, file_name: str) -> bool:
-        with open(file_name) as file:
-            jCont = json.load(file)
-            file.close()
+        try:
+            with open(file_name) as file:
+                jCont = json.load(file)
+                file.close()
+        except:
+            return False
 
         self._g = DiGraph()
         nodesLen = len(jCont['Nodes'])
@@ -42,6 +46,7 @@ class GraphAlgo(GraphAlgoInterface):
             dest = edgesData['dest']
             w = float(edgesData['w'])
             self._g.add_edge(src,dest,w)
+        return True
 
     def save_to_json(self, file_name: str) -> bool:
         nodesList = self.get_graph().get_all_v()
@@ -126,42 +131,51 @@ class GraphAlgo(GraphAlgoInterface):
         center = min(Q, key=Q.get)
         return center, Q[center]
 
+    def shortForThread(self, nodes, src):
+        for dest in nodes:
+            w, listNodes = self.shortest_path(src, dest)
+            if w != float('inf'):
+                if src not in self.allPairsW:
+                    self.allPairsW[src] = {}
+                if src not in self.allPairsPath:
+                    self.allPairsPath[src] = {}
+                self.allPairsW[src][dest] = w
+                self.allPairsPath[src][dest] = listNodes
+
     def TSP(self, node_lst: List[int]) -> (List[int], float):
-            nodes = self.get_graph().get_all_v()
-            self.allPairsW = {}
-            self.allPairsPath = {}
-            for src in nodes:
-                for dest in nodes:
-                    w, listNodes = self.shortest_path(src, dest)
-                    if w != float('inf'):
-                        if src not in self.allPairsW:
-                            self.allPairsW[src] = {}
-                        if src not in self.allPairsPath:
-                            self.allPairsPath[src] = {}
-                        self.allPairsW[src][dest] = w
-                        self.allPairsPath[src][dest] = listNodes
+        nodes = self.get_graph().get_all_v()
+        self.allPairsW = {}
+        self.allPairsPath = {}
+        threadArr = []
+        for src in node_lst:
+            th = threading.Thread(target=self.shortForThread, args=(node_lst, src))
+            th.start()
+            threadArr += [th]
+        for i in range(len(threadArr)):
+            threadArr[i].join()
 
-            currNodes = list()
-            for city in node_lst:
-                remained = list(node_lst)
-                remained.remove(city)
-                currNodes = list([city])
-                self.setPathsList(currNodes, remained, 0)
 
-            currNodes = ""
-            w = float('inf')
-            for src in self._pathBest:
-                for bestNodes in self._pathBest[src]:
-                    currWeight = self._pathBest[src][bestNodes]
-                    if currWeight < w:
-                        w = currWeight
-                        currNodes = bestNodes
+        currNodes = list()
+        for city in node_lst:
+            remained = list(node_lst)
+            remained.remove(city)
+            currNodes = list([city])
+            self.setPathsList(currNodes, remained, 0)
 
-            currNodes = json.loads(currNodes)
-            nodesRet = list()
-            for num in currNodes:
-                nodesRet.append(int(num))
-            return nodesRet, w
+        currNodes = ""
+        w = float('inf')
+        for src in self._pathBest:
+            for bestNodes in self._pathBest[src]:
+                currWeight = self._pathBest[src][bestNodes]
+                if currWeight < w:
+                    w = currWeight
+                    currNodes = bestNodes
+
+        currNodes = json.loads(currNodes)
+        nodesRet = list()
+        for num in currNodes:
+            nodesRet.append(int(num))
+        return nodesRet, w
 
     def setPathsList(self, nodes: List[int], nodesRemain: List[int], w: float):
         if len(nodesRemain) == 0:

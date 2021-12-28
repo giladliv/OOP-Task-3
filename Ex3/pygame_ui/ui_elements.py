@@ -1,5 +1,7 @@
 import pygame
 from pygame import *
+from typing import List
+from typing import Tuple
 
 font.init()
 arial_font = font.SysFont('Arial', 15, bold=True)
@@ -10,7 +12,7 @@ class Button:
     simple button, base for everything
     """
 
-    def __init__(self, title: str, size: [int, int], color=Color(155, 230, 250)):
+    def __init__(self, title: str, size: Tuple[int, int], color=Color(155, 230, 250)):
         self.title = title
         self.size = size
         self.color = color
