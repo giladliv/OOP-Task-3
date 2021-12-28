@@ -15,7 +15,10 @@ class DiGraph(GraphInterface):
         return len(self._nodes)
     # |E|
     def e_size(self) -> int:
-        return len(self._edges)
+        size = 0
+        for src in self._edges:
+            size += len(self._edges[src])
+        return size
 
     # get dict of nodes
     def get_all_v(self) -> dict:
@@ -61,7 +64,6 @@ class DiGraph(GraphInterface):
             return False
 
         if pos == None:
-
             pos = tuple((randint(0, 100), randint(0, 100), 0.0))
     # pos = coordinate --> (x,y,z) --> len=3
         if len(pos) > 3:
@@ -79,6 +81,7 @@ class DiGraph(GraphInterface):
         for src in self.all_in_edges_of_node(node_id):
             self.remove_edge(src, node_id)
         del self._nodes[node_id]
+        return True
 
     # remove adge
     def remove_edge(self, node_id1: int, node_id2: int) -> bool:
