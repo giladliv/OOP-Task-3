@@ -50,3 +50,9 @@ similar to selecting the Shortest path, after done selecting it will show only t
 
 #### Refresh
 when pressing on this button the graph will be refreshed and prersented before any other algorithms preformed
+
+
+## Run Times
+this is the comparison of the diffrent Assignments:
+![rtPic](/Ex3/pics/rt.png)
+
