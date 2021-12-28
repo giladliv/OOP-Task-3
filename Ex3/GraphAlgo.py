@@ -21,6 +21,8 @@ class GraphAlgo(GraphAlgoInterface):
         return self._g
 
     def load_from_json(self, file_name: str) -> bool:
+        if not file_name.endswith(".json"):
+            file_name += '.json'
         try:
             with open(file_name) as file:
                 jCont = json.load(file)
@@ -50,7 +52,7 @@ class GraphAlgo(GraphAlgoInterface):
 
     def save_to_json(self, file_name: str) -> bool:
         if not file_name.endswith(".json"):
-            return False
+            file_name += '.json'
         nodesList = self.get_graph().get_all_v()
         nodes = []
         edges = []
@@ -120,15 +122,20 @@ class GraphAlgo(GraphAlgoInterface):
     def centerPoint(self) -> (int, float):
         nodes = self.get_graph().get_all_v()
         Q = {}
+        count = 0
         for src in nodes:
             pathMax = -1
             for dest in nodes:
                 w, listNodes = self.shortest_path(src, dest)
+                if len(listNodes) == len(nodes):
+                    count += 1
                 if w != float('inf') and pathMax < w:
                     pathMax = w
             if pathMax >= 0:
                 Q[src] = pathMax
                 # print(str(src) + " " + str(Q[src]))
+        if count != len(nodes):
+            return None, float('inf')
         center = min(Q, key=Q.get)
         return center, Q[center]
 
