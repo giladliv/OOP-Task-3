@@ -64,7 +64,7 @@ class GraphAlgo(GraphAlgoInterface):
         for node in nodesList:
             dictNode = {}
             dictNode['id'] = node
-            dictNode['pos'] = nodesList[node]   # save node as id and pos dict
+            dictNode['pos'] = str(nodesList[node])[1:-1]   # save node as id and pos dict
             nodes += [dictNode]
 
             outEdges = self.get_graph().all_out_edges_of_node(node) # save all the edges of some node
@@ -73,6 +73,7 @@ class GraphAlgo(GraphAlgoInterface):
                 currOutEdges['src'] = node
                 currOutEdges['dest'] = dest
                 currOutEdges['w'] = outEdges[dest]
+                edges += [currOutEdges]
         dictJson = {}
         dictJson['Nodes'] = nodes
         dictJson['Edges'] = edges
