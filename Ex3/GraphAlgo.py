@@ -20,6 +20,7 @@ class GraphAlgo(GraphAlgoInterface):
     def get_graph(self) -> GraphInterface:
         return self._g
 
+    # load graph's details from json
     def load_from_json(self, file_name: str) -> bool:
         try:
             with open(file_name) as file:
@@ -28,6 +29,7 @@ class GraphAlgo(GraphAlgoInterface):
         except:
             return False
 
+    # collection graph data from json file
         self._g = DiGraph()
         nodesLen = len(jCont['Nodes'])
         for nodeData in jCont['Nodes']:
@@ -48,11 +50,13 @@ class GraphAlgo(GraphAlgoInterface):
             self._g.add_edge(src,dest,w)
         return True
 
+    # save to json
     def save_to_json(self, file_name: str) -> bool:
         nodesList = self.get_graph().get_all_v()
         nodes = []
         edges = []
 
+    # Insert data into json file
         for node in nodesList:
             dictNode = {}
             dictNode['id'] = node
@@ -85,17 +89,21 @@ class GraphAlgo(GraphAlgoInterface):
         except:
             return False
 
+    # Dijkstra algorithm
     def shortest_path(self, id1: int, id2: int) -> (float, list):
         Q = []
         dist = {}
         prev = {}
+        # get all the nodes in the connected graph
         for v in self._g.get_all_v():
             dist[v] = float('inf')
             prev[v] = None
             Q.append(v)
         dist[id1] = 0
 
+    # while Q is not empty
         while len(Q) > 0:
+            #  Node with the least distance will be selected first
             u = min(Q, key=dist.get)
             Q.remove(u)
 
@@ -107,22 +115,28 @@ class GraphAlgo(GraphAlgoInterface):
                         u = prev[u]
                 return dist[id2], s
 
+            # where v is still in Q
             neighbors = self._g.all_out_edges_of_node(u)
             for v in neighbors:
                 alt = dist[u] + neighbors[v]
                 if alt < dist[v]:
-                    dist[v] = alt
+                    dist[v] = alt   # A shorter path to v has been found
                     prev[v] = u
 
         return float('inf'), list()
 
+    # find the center of the graph
     def centerPoint(self) -> (int, float):
         nodes = self.get_graph().get_all_v()
         Q = {}
+        # For each node in the graph we find the shortest path for
+        # each other nodes in the graph
         for src in nodes:
             pathMax = -1
             for dest in nodes:
                 w, listNodes = self.shortest_path(src, dest)
+                # The maximum path of all the shortest paths we found
+                # in the graph between the nodes
                 if w != float('inf') and pathMax < w:
                     pathMax = w
             if pathMax >= 0:
@@ -131,6 +145,7 @@ class GraphAlgo(GraphAlgoInterface):
         center = min(Q, key=Q.get)
         return center, Q[center]
 
+    # thread to find the TSP for a group of some of the nodes
     def shortForThread(self, nodes, src):
         for dest in nodes:
             w, listNodes = self.shortest_path(src, dest)
